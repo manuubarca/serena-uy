@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serena | Diseños Arquitectónicos</title>
+  <!-- Tailwind CSS desde CDN con configuración personalizada -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondoSuave: '#F8F8F8',
+            verdeGrisaceo: '#a19b94',
+            textoPrimario: '#4F4F4F',
+            hoverVerde: '#494949',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-fondoSuave text-textoPrimario font-sans">
+
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full bg-transparent p-4 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-serif text-white cursor-pointer uppercase" onclick="location.href='index.html'">Serena</h1>
+      <nav class="space-x-4">
+        <a href="inicio.html" class="text-white hover:text-hoverVerde">Inicio</a>
+        <a href="projects.html" class="text-white hover:text-hoverVerde">Proyectos</a>
+        <a href="about.html" class="text-white hover:text-hoverVerde">Sobre Mí</a>
+        <a href="contact.html" class="text-white hover:text-hoverVerde">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sub-Index con Carrusel -->
+  <section class="relative w-full h-screen bg-white overflow-hidden">
+    <div class="swiper-container w-full h-full">
+      <div class="swiper-wrapper">
+        <!-- Carrusel Desktop -->
+        <div class="swiper-slide flex items-center justify-center h-full hidden md:flex">
+          <img src="../../public/images/projects/exterior-1.jpg" alt="Proyecto 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+            <h3 class="text-4xl font-serif uppercase">Casa 0</h3>
+            <a href="projects.html#project1" class="bg-verdeGrisaceo text-white px-4 py-2 mt-4 hover:bg-hoverVerde">Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center h-full hidden md:flex">
+          <img src="../../public/images/projects/interior-26.jpg" alt="Proyecto 2" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+            <h3 class="text-4xl font-serif uppercase">Interiorismo</h3>
+            <a href="projects.html#project2" class="bg-verdeGrisaceo text-white px-4 py-2 mt-4 hover:bg-hoverVerde">Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center h-full hidden md:flex">
+          <img src="../../public/images/projects/interior-44.jpg" alt="Proyecto 3" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+            <h3 class="text-4xl font-serif uppercase">Minimalismo</h3>
+            <a href="projects.html#project3" class="bg-verdeGrisaceo text-white px-4 py-2 mt-4 hover:bg-hoverVerde">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <!-- Carrusel Mobile -->
+        <div class="swiper-slide flex items-center justify-center h-full md:hidden">
+          <img src="../../public/images/projects/exterior-1.jpg" alt="Proyecto Mobile 1" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+            <h3 class="text-3xl font-serif uppercase">Casa 0</h3>
+            <a href="projects.html#mobile1" class="bg-verdeGrisaceo text-white px-4 py-2 mt-4 hover:bg-hoverVerde">Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center h-full md:hidden">
+          <img src="../../public/images/projects/interior-40.jpg" alt="Proyecto Mobile 2" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+            <h3 class="text-3xl font-serif uppercase">Minimalismo</h3>
+            <a href="projects.html#mobile2" class="bg-verdeGrisaceo text-white px-4 py-2 mt-4 hover:bg-hoverVerde">Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center h-full md:hidden">
+          <img src="../../public/images/projects/interior-15.jpg" alt="Proyecto Mobile 3" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+            <h3 class="text-3xl font-serif uppercase">Interiorismo</h3>
+            <a href="projects.html#mobile3" class="bg-verdeGrisaceo text-white px-4 py-2 mt-4 hover:bg-hoverVerde">Ver Proyecto</a>
+          </div>
+        </div>
+      </div>
+      <!-- Controles del Carrusel -->
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+    </div>
+  </section>
+
+  <!-- SwiperJS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

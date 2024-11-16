@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Serena</title>
+  <!-- Tailwind CSS desde CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondoSuave: '#F8F8F8',
+            verdeGrisaceo: '#8A9B87',
+            textoPrimario: '#4F4F4F',
+            hoverVerde: '#637863',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-fondoSuave text-textoPrimario font-sans">
+  <!-- Encabezado -->
+  <header class="bg-white shadow p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-serif text-black cursor-pointer uppercase" onclick="location.href='index.html'">Serena</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:text-hoverVerde">Inicio</a>
+        <a href="projects.html" class="hover:text-hoverVerde">Proyectos</a>
+        <a href="about.html" class="hover:text-hoverVerde">Sobre Mí</a>
+        <a href="contact.html" class="hover:text-hoverVerde">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-serif text-black mb-4">Diseños que inspiran paz y sofisticación</h2>
+      <p class="text-lg text-gray-600 mb-6">Explora nuestras propuestas arquitectónicas que conectan con la naturaleza.</p>
+      <a href="projects.html" class="bg-verdeGrisaceo text-white px-6 py-3 rounded hover:bg-hoverVerde">Explora Nuestros Diseños</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="py-16">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-serif text-center text-black mb-8">Nuestros Valores</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <h4 class="text-xl font-semibold text-black mb-2">Minimalismo</h4>
+          <p class="text-gray-600">Diseños funcionales y estéticamente equilibrados.</p>
+        </div>
+        <div class="text-center">
+          <h4 class="text-xl font-semibold text-black mb-2">Sostenibilidad</h4>
+          <p class="text-gray-600">Materiales modernos y amigables con el entorno.</p>
+        </div>
+        <div class="text-center">
+          <h4 class="text-xl font-semibold text-black mb-2">Diseño Integral</h4>
+          <p class="text-gray-600">Unimos arquitectura e interiorismo en perfecta armonía.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-serif text-black mb-8">Testimonios</h3>
+      <blockquote class="italic text-lg text-gray-600">
+        “Trabajar con Lucía fue un placer. Su visión arquitectónica y atención al detalle son inigualables.”
+      </blockquote>
+      <p class="mt-4 text-black">- Cliente satisfecho</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-serif text-black mb-4">¿Listo para comenzar tu proyecto?</h3>
+      <a href="contact.html" class="bg-verdeGrisaceo text-white px-6 py-3 rounded hover:bg-hoverVerde">Hablemos</a>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer class="bg-white p-4 text-center mt-8">
+    <p class="text-black">&copy; 2024 Serena. Todos los derechos reservados.</p>
+    <div class="mt-4 space-x-4">
+      <a href="#" class="text-black hover:text-hoverVerde">Instagram</a>
+      <a href="#" class="text-black hover:text-hoverVerde">Pinterest</a>
+    </div>
+  </footer>
+</body>
+</html>
