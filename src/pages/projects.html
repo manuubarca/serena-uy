@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serena | En Construcción</title>
+  <!-- Tailwind CSS desde CDN con configuración personalizada -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondoSuave: '#F8F8F8',
+            verdeGrisaceo: '#a19b94',
+            textoPrimario: '#4F4F4F',
+            hoverVerde: '#494949',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-fondoSuave text-textoPrimario font-sans">
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full bg-transparent p-4 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="../../index.html"><h1 class="text-2xl font-serif verdeGrisaceo cursor-pointer uppercase">Serena</h1></a>
+      <nav class="space-x-4">
+        <a href="../../index.html" class="text-textoPrimario hover:text-hoverVerde">Inicio</a>
+        <a href="./projects.html" class="text-textoPrimario hover:text-hoverVerde">Proyectos</a>
+        <a href="./about.html" class="text-textoPrimario hover:text-hoverVerde">Sobre Mí</a>
+        <a href="./contact.html" class="text-textoPrimario hover:text-hoverVerde">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <div class="flex items-center justify-center h-screen">
+    <div class="text-center p-8">
+      <h1 class="text-4xl font-serif text-verdeGrisaceo mb-6">¡Página en Construcción!</h1>
+      <p class="text-lg text-gray-600 mb-6">Estamos trabajando en esta sección para ofrecerte la mejor experiencia. Por favor, vuelve pronto.</p>
+      <a href="../../index.html" class="bg-verdeGrisaceo text-white px-6 py-3 rounded hover:bg-hoverVerde">Volver al Inicio</a>
+    </div>
+  </div>
+</body>
+</html>
